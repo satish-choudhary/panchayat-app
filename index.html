@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panchayat App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <h1>Panchayat Work Tracker</h1>
+        <p>Monitor village development tasks and progress in one place.</p>
+      </header>
+
+      <section class="cards" aria-label="Overview">
+        <article class="card">
+          <h2>Total Projects</h2>
+          <p id="total-projects">0</p>
+        </article>
+        <article class="card">
+          <h2>Completed</h2>
+          <p id="completed-projects">0</p>
+        </article>
+        <article class="card">
+          <h2>Budget Utilized</h2>
+          <p id="budget-utilized">₹0</p>
+        </article>
+      </section>
+
+      <section class="controls" aria-label="Controls">
+        <input id="search" type="search" placeholder="Search by village or work..." />
+      </section>
+
+      <section aria-label="Work items">
+        <table>
+          <thead>
+            <tr>
+              <th>Village</th>
+              <th>Work</th>
+              <th>Status</th>
+              <th>Progress</th>
+              <th>Budget (₹)</th>
+            </tr>
+          </thead>
+          <tbody id="work-table"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <template id="row-template">
+      <tr>
+        <td class="village"></td>
+        <td class="work"></td>
+        <td>
+          <select class="status">
+            <option value="Planned">Planned</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </td>
+        <td>
+          <input class="progress" type="range" min="0" max="100" step="5" />
+          <span class="progress-label"></span>
+        </td>
+        <td class="budget"></td>
+      </tr>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

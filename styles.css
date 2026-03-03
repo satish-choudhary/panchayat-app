@@ -1,0 +1,93 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f6f8fb;
+  color: #1a2130;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+}
+
+.card h2 {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #5f6c82;
+}
+
+.card p {
+  font-size: 1.6rem;
+  margin: 0.5rem 0 0;
+  font-weight: 700;
+}
+
+.controls {
+  margin-bottom: 1rem;
+}
+
+input[type='search'] {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #c8d1e2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 1px solid #edf1f7;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+select,
+input[type='range'] {
+  width: 100%;
+}
+
+.progress-label {
+  display: inline-block;
+  min-width: 3rem;
+  text-align: right;
+}
